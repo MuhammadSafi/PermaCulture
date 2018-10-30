@@ -17,6 +17,7 @@ namespace PermaCulture
             CreateWebHostBuilder(args).Build().Run();
         }
 
+        /// test
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
