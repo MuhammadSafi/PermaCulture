@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PermaCulture.Model
+namespace PermaCulture.Entities
 {
     public class Class1
     {

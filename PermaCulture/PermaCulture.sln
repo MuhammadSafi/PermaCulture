@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermaCulture.Api", "PermaCulture\PermaCulture.Api.csproj", "{864DC676-25C1-468B-987F-2856B693689A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermaCulture.Api", "PermaCulture\PermaCulture.Api.csproj", "{864DC676-25C1-468B-987F-2856B693689A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermaCulture.Api.Test", "PermaCulture.Api.Test\PermaCulture.Api.Test.csproj", "{2671C85C-868E-469E-9CAA-F4CCF241F041}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermaCulture.Api.Test", "PermaCulture.Api.Test\PermaCulture.Api.Test.csproj", "{2671C85C-868E-469E-9CAA-F4CCF241F041}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermaCulture.Core", "PermaCulture.Core\PermaCulture.Core.csproj", "{C37923E2-374F-4832-99A7-90A47C884D16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermaCulture.Core", "PermaCulture.Core\PermaCulture.Core.csproj", "{C37923E2-374F-4832-99A7-90A47C884D16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermaCulture.Model", "PermaCulture.Model\PermaCulture.Model.csproj", "{FE46CED6-760F-4EC4-BE16-CA32332B4A3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermaCulture.Repository", "PermaCulture.Repository\PermaCulture.Repository.csproj", "{DA3182B8-4071-4AE9-91EB-0D32C19B126C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermaCulture.Repository", "PermaCulture.Repository\PermaCulture.Repository.csproj", "{DA3182B8-4071-4AE9-91EB-0D32C19B126C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermaCulture.Shared", "PermaCulture.Shared\PermaCulture.Shared.csproj", "{167948BF-3D6C-4597-AB80-5BDC73399750}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermaCulture.Shared", "PermaCulture.Shared\PermaCulture.Shared.csproj", "{167948BF-3D6C-4597-AB80-5BDC73399750}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermaCulture.Caching", "PermaCulture.Caching\PermaCulture.Caching.csproj", "{35D75365-26A3-4B74-ACC8-9FA6D17B3A7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermaCulture.Caching", "PermaCulture.Caching\PermaCulture.Caching.csproj", "{35D75365-26A3-4B74-ACC8-9FA6D17B3A7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermaCulture.Context", "PermaCulture.Context\PermaCulture.Context.csproj", "{1BAEB80F-5213-43F2-953A-E58D66B71973}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermaCulture.Context", "PermaCulture.Context\PermaCulture.Context.csproj", "{1BAEB80F-5213-43F2-953A-E58D66B71973}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermaCulture.Entities", "PermaCulture.Entities\PermaCulture.Entities.csproj", "{6A330EAE-D39D-4FB3-B9D0-D07967BBA8CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,6 @@ Global
 		{C37923E2-374F-4832-99A7-90A47C884D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C37923E2-374F-4832-99A7-90A47C884D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C37923E2-374F-4832-99A7-90A47C884D16}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FE46CED6-760F-4EC4-BE16-CA32332B4A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE46CED6-760F-4EC4-BE16-CA32332B4A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE46CED6-760F-4EC4-BE16-CA32332B4A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE46CED6-760F-4EC4-BE16-CA32332B4A3B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA3182B8-4071-4AE9-91EB-0D32C19B126C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DA3182B8-4071-4AE9-91EB-0D32C19B126C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA3182B8-4071-4AE9-91EB-0D32C19B126C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +53,10 @@ Global
 		{1BAEB80F-5213-43F2-953A-E58D66B71973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BAEB80F-5213-43F2-953A-E58D66B71973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BAEB80F-5213-43F2-953A-E58D66B71973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A330EAE-D39D-4FB3-B9D0-D07967BBA8CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A330EAE-D39D-4FB3-B9D0-D07967BBA8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A330EAE-D39D-4FB3-B9D0-D07967BBA8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A330EAE-D39D-4FB3-B9D0-D07967BBA8CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

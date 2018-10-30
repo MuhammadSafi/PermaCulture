@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
+    <Compile Remove="Entities\PermaCultureContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities\" />
   </ItemGroup>
 
 </Project>
