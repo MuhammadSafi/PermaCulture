@@ -10,6 +10,10 @@ namespace PermaCulture.API.Controller
 
     public class PermaController : ControllerBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("api/ping")]
         public ActionResult Ping()
