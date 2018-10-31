@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermaCulture.Caching", "Per
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermaCulture.Context", "PermaCulture.Context\PermaCulture.Context.csproj", "{1BAEB80F-5213-43F2-953A-E58D66B71973}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermaCulture.Entities", "PermaCulture.Entities\PermaCulture.Entities.csproj", "{6A330EAE-D39D-4FB3-B9D0-D07967BBA8CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermaCulture.Entities", "PermaCulture.Entities\PermaCulture.Entities.csproj", "{6A330EAE-D39D-4FB3-B9D0-D07967BBA8CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermaCulture.Model", "PermaCulture.Model\PermaCulture.Model.csproj", "{8748A5A1-B1D0-4E0C-A209-FC76F846C0CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{6A330EAE-D39D-4FB3-B9D0-D07967BBA8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A330EAE-D39D-4FB3-B9D0-D07967BBA8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A330EAE-D39D-4FB3-B9D0-D07967BBA8CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8748A5A1-B1D0-4E0C-A209-FC76F846C0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8748A5A1-B1D0-4E0C-A209-FC76F846C0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8748A5A1-B1D0-4E0C-A209-FC76F846C0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8748A5A1-B1D0-4E0C-A209-FC76F846C0CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

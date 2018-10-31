@@ -2,10 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>bcebe005-735e-4b7a-a45c-8f154c2b9b71</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Compile Remove="Models\**" />
+    <Content Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -16,6 +23,10 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3"></DotNetCliToolReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PermaCulture.Context\PermaCulture.Context.csproj" />
+    <ProjectReference Include="..\PermaCulture.Entities\PermaCulture.Entities.csproj" />
   </ItemGroup>
 
 </Project>
