@@ -31,5 +31,11 @@ namespace PermaCulture
             //    await context.Response.WriteAsync("Hello World!");
             //});
         }
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+
+            services.ConfigureDependencies();
+        }
     }
 }
