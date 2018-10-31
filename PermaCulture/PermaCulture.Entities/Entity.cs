@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace PermaCulture.Entities
@@ -18,7 +18,7 @@ namespace PermaCulture.Entities
             CreatedOn = DateTime.UtcNow;
         }
 
-        [Key]
+       // [Key]
         public long Id { get; set; }
 
         ////public virtual User CreatedBy { get; set; }

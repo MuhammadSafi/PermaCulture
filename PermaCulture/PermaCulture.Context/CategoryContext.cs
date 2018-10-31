@@ -5,7 +5,11 @@ using System.Text;
 
 namespace PermaCulture.Context
 {
-    public class CategoryContext
+    public interface ICategoryContext
+    {
+        List<PermaCulture.Entities.Category> GetCategories();
+    }
+    public class CategoryContext   : ICategoryContext 
     {
         private readonly CategoryRepository _categoryRepository;
 
