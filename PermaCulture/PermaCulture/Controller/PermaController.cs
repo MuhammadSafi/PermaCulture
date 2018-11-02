@@ -13,9 +13,9 @@ namespace PermaCulture.API.Controller
     public class PermaController : ControllerBase
     {
 
-        private readonly CategoryContext _categoryContext;
+        private readonly ICategoryContext _categoryContext;
 
-        public PermaController(CategoryContext categoryContext)
+        public PermaController(ICategoryContext categoryContext)
         {
             _categoryContext = categoryContext;
            
@@ -29,11 +29,8 @@ namespace PermaCulture.API.Controller
         [Route("api/ping")]
         public ActionResult Ping()
         {
-            //PermaCultureContext aa = new PermaCultureContext();
-            //var lst = aa.Category.Select(a => a.Content).ToList();
-            //return Ok(lst);
             var aa=_categoryContext.GetCategories();
-            return Ok("da");
+            return Ok(aa);
         }
     }
 }

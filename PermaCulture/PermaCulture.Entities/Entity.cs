@@ -8,7 +8,7 @@ namespace PermaCulture.Entities
 
     public interface IEntity
     {
-        long Id { get; set; }
+        int Id { get; set; }
     }
 
     public abstract class Entity : IEntity
@@ -18,16 +18,16 @@ namespace PermaCulture.Entities
             CreatedOn = DateTime.UtcNow;
         }
 
-       // [Key]
-        public long Id { get; set; }
+        // [Key]
+        public int Id { get; set; }
 
         ////public virtual User CreatedBy { get; set; }
-        public virtual long? CreatedBy { get; set; }
+        public virtual int? CreatedBy { get; set; }
 
         public virtual DateTime CreatedOn { get; set; }
 
         ////public virtual User UpdatedBy { get; set; }
-        public virtual long? UpdatedBy { get; set; }
+        public virtual int? UpdatedBy { get; set; }
 
         public virtual DateTime? UpdatedOn { get; set; }
     }

@@ -56,7 +56,7 @@ namespace PermaCulture.Repository
         protected virtual async Task SaveChangesAsync() => await _context.SaveChangesAsync();
 
 
-        protected virtual async Task<long> InsertAsync(T entity, long userId, bool saveChanges = true)
+        protected virtual async Task<long> InsertAsync(T entity, int userId, bool saveChanges = true)
         {
             entity.CreatedBy = userId;
             await _dbSet.AddAsync(entity);
@@ -70,7 +70,7 @@ namespace PermaCulture.Repository
         }
 
 
-        protected virtual async Task InsertAsync(IEnumerable<T> entities, long userId, bool saveChanges = true)
+        protected virtual async Task InsertAsync(IEnumerable<T> entities, int userId, bool saveChanges = true)
         {
             foreach (var item in entities)
             {
@@ -86,7 +86,7 @@ namespace PermaCulture.Repository
         }
 
 
-        protected virtual async Task UpdateAsync(T entity, long userId, bool saveChanges = true)
+        protected virtual async Task UpdateAsync(T entity, int userId, bool saveChanges = true)
         {
             entity.UpdatedBy = userId;
             entity.UpdatedOn = DateTime.UtcNow;
@@ -100,7 +100,7 @@ namespace PermaCulture.Repository
         }
 
 
-        protected virtual async Task UpdateAsync(IEnumerable<T> entities, long userId, bool saveChanges = true)
+        protected virtual async Task UpdateAsync(IEnumerable<T> entities, int userId, bool saveChanges = true)
         {
             var now = DateTime.UtcNow;
 

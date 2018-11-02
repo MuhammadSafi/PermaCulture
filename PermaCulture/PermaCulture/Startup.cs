@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using PermaCulture.Api.Extensions;
+using PermaCulture.Repository;
 
 namespace PermaCulture
 {
@@ -15,6 +18,16 @@ namespace PermaCulture
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //var conn = Configuration.GetConnectionString("DefaultConnection");
+            //services.AddDbContext<AppContext>(options => options.UseSqlServer(conn));
+
+            services.AddDbContext<PermaCultureContext>(options => options.UseSqlServer("Server=SAFI\\SQLEXPRESS;Database=PermaCulture;Trusted_Connection=True;"));
+            //services.AddDbContext<PermaCultureContext>();
+            //services.AddScoped<PermaCultureContext>(sp => sp.GetService<PermaCultureContext>());
+            //container = services.BuildServiceProvider();
+
+
+            services.ConfigureDependencies();
             services.AddMvc();
         }
 
@@ -32,10 +45,10 @@ namespace PermaCulture
             //});
         }
 
-        public void ConfigureServices(IServiceCollection services)
-        {
+        //public void ConfigureServices(IServiceCollection services)
+        //{
 
-            services.ConfigureDependencies();
-        }
+        //    services.ConfigureDependencies();
+        //}
     }
 }

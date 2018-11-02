@@ -11,9 +11,9 @@ namespace PermaCulture.Context
     }
     public class CategoryContext   : ICategoryContext 
     {
-        private readonly CategoryRepository _categoryRepository;
+        private readonly ICategoryRepository _categoryRepository;
 
-        public CategoryContext(CategoryRepository categoryRepository) {
+        public CategoryContext(ICategoryRepository categoryRepository) {
 
             _categoryRepository = categoryRepository;
 
