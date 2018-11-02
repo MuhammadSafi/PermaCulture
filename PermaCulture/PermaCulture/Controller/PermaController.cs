@@ -18,7 +18,7 @@ namespace PermaCulture.API.Controller
         public PermaController(ICategoryContext categoryContext)
         {
             _categoryContext = categoryContext;
-           
+
         }
 
         /// <summary>
@@ -27,9 +27,9 @@ namespace PermaCulture.API.Controller
         /// <returns></returns>
         [HttpGet]
         [Route("api/ping")]
-        public ActionResult Ping()
+        public async Task<ActionResult> Ping()
         {
-            var aa=_categoryContext.GetCategories();
+            var aa = await _categoryContext.GetCategories();
             return Ok(aa);
         }
     }

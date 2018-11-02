@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace PermaCulture.Context
 {
     public interface ICategoryContext
     {
-        List<PermaCulture.Entities.Category> GetCategories();
+        Task<List<PermaCulture.Entities.Category>> GetCategories();
     }
     public class CategoryContext   : ICategoryContext 
     {
@@ -19,9 +20,9 @@ namespace PermaCulture.Context
 
 
         }
-        public List<PermaCulture.Entities.Category> GetCategories()
+        public async Task<List<PermaCulture.Entities.Category>> GetCategories()
         {
-            var ret = _categoryRepository.GetCategoryAsync(0, 0, 0);
+            var ret =await _categoryRepository.GetCategoryAsync(0, 0, 0);
             return ret;
         }
     }
