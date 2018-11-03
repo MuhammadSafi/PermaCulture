@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using PermaCulture.Api.Extensions;
 using PermaCulture.Repository;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace PermaCulture
 {
@@ -18,6 +19,10 @@ namespace PermaCulture
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSwaggerGen(
+                 c => { c.SwaggerDoc("v1", new Info { Title = "Core API", Description = "Swagger Core API" }); }
+
+            );
             //var conn = Configuration.GetConnectionString("DefaultConnection");
             //services.AddDbContext<AppContext>(options => options.UseSqlServer(conn));
 
@@ -39,6 +44,14 @@ namespace PermaCulture
                 app.UseDeveloperExceptionPage();
             }
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "PermaCulture API.");
+            }
+
+
+                );
             //app.Run(async (context) =>
             //{
             //    await context.Response.WriteAsync("Hello World!");

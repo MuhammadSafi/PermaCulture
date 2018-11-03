@@ -20,10 +20,10 @@ namespace PermaCulture.Repository
         }
 
 
-        public async Task<bool> ExistsAsync(long id) => await _dbSet.AnyAsync(e => e.Id == id);
+        public async Task<bool> ExistsAsync(int id) => await _dbSet.AnyAsync(e => e.Id == id);
 
 
-        public virtual async Task DeleteAsync(long id, bool saveChanges = true)
+        public virtual async Task DeleteAsync(int id, bool saveChanges = true)
         {
             var entity = await _dbSet.FindAsync(id);
             _context.Remove(entity);
@@ -35,7 +35,7 @@ namespace PermaCulture.Repository
         }
 
 
-        public virtual async Task DeleteRangeAsync(IEnumerable<long> Ids, bool saveChanges = true)
+        public virtual async Task DeleteRangeAsync(IEnumerable<int> Ids, bool saveChanges = true)
         {
             var Entities = _dbSet.Where(a => Ids.Contains(a.Id));
             _context.RemoveRange(Entities);
@@ -47,10 +47,10 @@ namespace PermaCulture.Repository
         }
 
 
-        protected virtual async Task<T> GetAsync(long id) => await _dbSet.FindAsync(id);
+        protected virtual async Task<T> GetAsync(int id) => await _dbSet.FindAsync(id);
 
 
-        protected virtual IEnumerable<T> Get(IEnumerable<long> ids) => _dbSet.Where(e => ids.Contains(e.Id)).AsEnumerable();
+        protected virtual IEnumerable<T> Get(IEnumerable<int> ids) => _dbSet.Where(e => ids.Contains(e.Id)).AsEnumerable();
 
 
         protected virtual async Task SaveChangesAsync() => await _context.SaveChangesAsync();

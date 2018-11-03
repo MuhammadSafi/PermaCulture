@@ -8,6 +8,7 @@ namespace PermaCulture.Model
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string ParentName { get; set; }
         public int ParentId { get; set; }
         public int? CreatedBy { get; set; }
         public DateTime? CreatedOn { get; set; }

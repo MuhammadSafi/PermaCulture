@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PermaCulture.Entities\PermaCulture.Entities.csproj" />
+    <ProjectReference Include="..\PermaCulture.Model\PermaCulture.Model.csproj" />
     <ProjectReference Include="..\PermaCulture.Shared\PermaCulture.Shared.csproj" />
   </ItemGroup>
 
