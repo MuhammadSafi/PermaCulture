@@ -4,13 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PermaCulture.Api.Controller;
 using PermaCulture.Context;
 
 
 namespace PermaCulture.API.Controller
 {
 
-    public class PermaController : ControllerBase
+    public class PermaController : PermaCultureControllerBase
     {
 
         private readonly ICategoryContext _categoryContext;
@@ -27,10 +28,10 @@ namespace PermaCulture.API.Controller
         /// <returns></returns>
         [HttpGet]
         [Route("api/ping")]
-        public async Task<ActionResult> Ping()
+        public async Task<IActionResult> Ping()
         {
-            var aa = await _categoryContext.GetCategories();
-            return Ok(aa);
+            var response = await _categoryContext.GetCategories();
+            return GetActionResult(response);
         }
     }
 }

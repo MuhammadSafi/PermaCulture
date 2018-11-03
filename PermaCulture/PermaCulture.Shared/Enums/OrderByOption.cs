@@ -1,4 +1,4 @@
-﻿namespace Songster.Shared.Enums
+﻿namespace PermaCulture.Shared.Enums
 {
 	public enum OrderByOption
 	{

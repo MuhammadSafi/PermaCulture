@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using PermaCulture.Entities;
 using PermaCulture.Shared;
 using Microsoft.EntityFrameworkCore;
+using PermaCulture.Shared.Extensions;
 
 namespace PermaCulture.Repository
 {
     public interface ICategoryRepository
     {
-       Task <List<Category>> GetCategoryAsync(int categoryId, int limit, int offset);
+       Task <PagedCollection<Category>> GetCategoryAsync(int categoryId, int limit, int offset);
     }
     public class CategoryRepository : DefaultRepository<Category>, ICategoryRepository
     {
@@ -21,9 +22,10 @@ namespace PermaCulture.Repository
         }
         //public async Task<IEnumerable<Category>> GetCategoryAsync() => await _dbSet.OrderBy(a => a.Name).Select(a => ArtistDtoBuilder.BuildBasic(a)).ToArrayAsync();
 
-        public  async Task<List<Category>> GetCategoryAsync(int categoryId, int limit, int offset)
+        public  async Task<PagedCollection<Category>> GetCategoryAsync(int categoryId, int limit, int offset)
         {
-            var aa =  await _dbSet.OrderBy(a => a.Name).ToListAsync();
+            var total = await _dbSet.CountAsync();
+            var aa =  _dbSet.OrderBy(a => a.Name).ToPagedCollection(total);
             return aa;
         }
     }
